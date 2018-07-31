@@ -83,7 +83,7 @@ public class MusicPlayerService extends Service implements MediaPlayer.OnPrepare
         Notification.Builder builder = new Notification.Builder(this);
 
         builder.setContentIntent(pendInt)
-                .setSmallIcon(R.drawable.ic_play_arrow_black_24dp)
+                .setSmallIcon(R.drawable.play)
                 .setTicker(songTitle)
                 .setOngoing(true)
                 .setContentTitle("Playing")
@@ -163,6 +163,7 @@ public class MusicPlayerService extends Service implements MediaPlayer.OnPrepare
             currentPosition=songs.size()-1;}
         playSong();
         }
+
     public void playNext(){
         currentPosition ++;
         if(currentPosition>=songs.size()) {
